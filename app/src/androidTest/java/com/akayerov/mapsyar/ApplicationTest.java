@@ -1,4 +1,4 @@
-package com.akayerov.mapstest;
+package com.akayerov.mapsyar;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

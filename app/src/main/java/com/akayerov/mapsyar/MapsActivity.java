@@ -1,17 +1,15 @@
-package com.akayerov.mapstest;
+package com.akayerov.mapsyar;
 
-import android.content.res.AssetManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
+
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -234,17 +232,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.clear();
         for(int i=0; i<mesto.size(); i++)
             if(groupMarker == 0 || groupMarker == mesto.get(i).getIdIcon() )
-            mMap.addMarker(new MarkerOptions().position(mesto.get(i).getPosition())
-                    .title(mesto.get(i).getTitle())
-                    .snippet(mesto.get(i).getName())
-                    .icon(BitmapDescriptorFactory.fromAsset(mesto.get(i).getIcon())
-                    ));
+                mMap.addMarker(new MarkerOptions().position(mesto.get(i).getPosition())
+                        .title(mesto.get(i).getTitle())
+                        .snippet(mesto.get(i).getName())
+                        .icon(BitmapDescriptorFactory.fromAsset(mesto.get(i).getIcon())
+                        ));
 
     }
 
     public void onGoToMarker0(View view) {
-       setMarkers(mesto,0);
-       return;
+        setMarkers(mesto,0);
+        return;
     }
     public void onGoToMarker1(View view) {
         setMarkers(mesto,1);

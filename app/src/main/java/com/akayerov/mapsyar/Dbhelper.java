@@ -1,4 +1,4 @@
-package com.akayerov.mapstest;
+package com.akayerov.mapsyar;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
